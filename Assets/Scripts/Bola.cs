@@ -6,19 +6,29 @@ using UnityEngine.UI;
 public class Bola : MonoBehaviour
 {
 
-    public float velocidad=30.0f;
+    public int goles=0;
+    public int golesjuego;
+    public float velocidad = 30.0f;
+
 
     //Audio Source
     AudioSource fuenteDeAudio;
+
     //Clips de audio
-    public AudioClip audioGol, audioRaqueta, audioRebote;
+    public AudioClip audioGol, 
+    audioRaqueta, 
+    audioRebote, 
+    audioInicio, 
+    audioFinal;
 
     //Contadores de goles
     public int golesIzquierda = 0;
     public int golesDerecha = 0;
+
     //Cajas de texto de los contadores
     public Text contadorIzquierda;
     public Text contadorDerecha;
+    public Text TextoGanar;
 
     void Start()
     {
@@ -30,6 +40,10 @@ public class Bola : MonoBehaviour
         //Pongo los contadores a 0
         contadorIzquierda.text = golesIzquierda.ToString();
         contadorDerecha.text = golesDerecha.ToString();
+        TextoGanar.text="";
+
+        fuenteDeAudio.clip= audioInicio;
+        fuenteDeAudio.Play();
 
     }
 
@@ -92,8 +106,6 @@ public class Bola : MonoBehaviour
         //Posición 0 de la bola
         transform.position = Vector2.zero;
         //Vector2.zero es lo mismo que new Vector2(0,0);
-        //Velocidad inicial de la bola
-        velocidad = 30;
         //Velocidad y dirección
         if (direccion == "Derecha"){
             //Incremento goles al de la derecha
@@ -120,6 +132,25 @@ public class Bola : MonoBehaviour
     }
 
     void Update(){
-        velocidad=velocidad+0.1f;
+        golesjuego=goles;
+        goles = golesDerecha + golesIzquierda;
+
+        if(golesjuego<goles){
+            velocidad = velocidad + 0.1f;
+        }
+
+        velocidad = velocidad + 0.1f;
+
+        if (golesDerecha == 3) {
+            TextoGanar.text="Gano la derecha";
+            fuenteDeAudio.clip = audioFinal;
+            fuenteDeAudio.Play();
+            }
+
+        if (golesIzquierda == 3){
+            TextoGanar.text="Gano la izquierda";
+            fuenteDeAudio.clip = audioFinal;
+            fuenteDeAudio.Play();
+            }
     }
 }

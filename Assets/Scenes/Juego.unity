@@ -756,7 +756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc895598172a6884089f25c2c833ef20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioInicio: {fileID: 8300000, guid: f8dcc0a13b819a644b9ebebdf6114cc5, type: 3}
 --- !u!4 &306230845
 Transform:
   m_ObjectHideFlags: 0
@@ -1748,6 +1747,86 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!1 &1382899945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382899946}
+  - component: {fileID: 1382899948}
+  - component: {fileID: 1382899947}
+  m_Layer: 5
+  m_Name: TextoGanar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1382899946
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382899945}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1553270295}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 310, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1382899947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382899945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.10568706, g: 0.8962264, b: 0.19181775, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 0d5099ae92a7689448bf830c9bcf9eea, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: New Text
+--- !u!222 &1382899948
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382899945}
+  m_CullTransparentMesh: 1
 --- !u!1 &1390860814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,6 +2089,7 @@ RectTransform:
   m_Children:
   - {fileID: 180048070}
   - {fileID: 643186624}
+  - {fileID: 1382899946}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2387,7 +2467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1798031852}
   - component: {fileID: 1798031851}
-  - component: {fileID: 1798031855}
+  - component: {fileID: 1798031857}
   - component: {fileID: 1798031854}
   - component: {fileID: 1798031853}
   - component: {fileID: 1798031856}
@@ -2512,26 +2592,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1798031855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798031850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d57c47bb95887d944bca782b8edbe8e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidad: 30
-  audioGol: {fileID: 8300000, guid: b87d9189ea6b6d740aba1cf5f31365b4, type: 3}
-  audioRaqueta: {fileID: 8300000, guid: bf9e1a0c6664afe48ae29cc062d2c971, type: 3}
-  audioRebote: {fileID: 8300000, guid: 7f60cf25b8a62e24586e4be110657cc9, type: 3}
-  golesIzquierda: 0
-  golesDerecha: 0
-  contadorIzquierda: {fileID: 180048071}
-  contadorDerecha: {fileID: 643186625}
 --- !u!82 &1798031856
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2628,6 +2688,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1798031857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798031850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d57c47bb95887d944bca782b8edbe8e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goles: 0
+  golesjuego: 0
+  velocidad: 30
+  audioGol: {fileID: 8300000, guid: b87d9189ea6b6d740aba1cf5f31365b4, type: 3}
+  audioRaqueta: {fileID: 8300000, guid: bf9e1a0c6664afe48ae29cc062d2c971, type: 3}
+  audioRebote: {fileID: 8300000, guid: 7f60cf25b8a62e24586e4be110657cc9, type: 3}
+  audioInicio: {fileID: 8300000, guid: f8dcc0a13b819a644b9ebebdf6114cc5, type: 3}
+  audioFinal: {fileID: 8300000, guid: d9e3503249b54f74cb5a69e2abb63fb9, type: 3}
+  golesIzquierda: 0
+  golesDerecha: 0
+  contadorIzquierda: {fileID: 180048071}
+  contadorDerecha: {fileID: 643186625}
+  TextoGanar: {fileID: 1382899947}
 --- !u!1 &1818904811
 GameObject:
   m_ObjectHideFlags: 0
